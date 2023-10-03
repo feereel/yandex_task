@@ -16,4 +16,6 @@ RUN python3 -m pip install -r requirements.txt
 
 COPY sender.py .
 
+USER pyuser
+
 CMD crond -f
