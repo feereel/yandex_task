@@ -19,7 +19,7 @@ def csv_to_json(csv_file_path):
 def send(url, json_data):
     try:
         r = requests.post(url=url, json=json_data)
-        logging.info(f'Status code: {r.status_code}')
+        print(f'Status code: {r.status_code}')
     except Exception as e:
         logging.error(f'Failder to send data to {url}', exc_info=e)
         exit(1)
